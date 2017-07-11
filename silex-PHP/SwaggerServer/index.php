@@ -337,10 +337,10 @@ $app->GET('/OlgaArc/Olga_test_api/1.0.0/partner/shop/', function(Application $ap
             });
 
 
-$app->PUT('/OlgaArc/Olga_test_api/1.0.0/partner/shop/', function(Application $app, Request $request) {
+$app->POST('/OlgaArc/Olga_test_api/1.0.0/partner/shop/', function(Application $app, Request $request) {
             
             $name = $request->get('name');    $logo = $request->get('logo');    $color_logo = $request->get('color_logo');    $color_scheme = $request->get('color_scheme');    $about_company = $request->get('about_company');    $about_delivery = $request->get('about_delivery');    $about_payment = $request->get('about_payment');    $price_type = $request->get('price_type');    $show_stock = $request->get('show_stock');    $domain_name = $request->get('domain_name');    
-            return new Response('How about implementing partnerShopPut as a PUT method ?');
+            return new Response('How about implementing partnerShopPost as a POST method ?');
             });
 
 
@@ -358,24 +358,10 @@ $app->POST('/OlgaArc/Olga_test_api/1.0.0/partner/tradepoint/', function(Applicat
             });
 
 
-$app->PUT('/OlgaArc/Olga_test_api/1.0.0/partner/tradepoint/', function(Application $app, Request $request) {
+$app->POST('/OlgaArc/Olga_test_api/1.0.0/partner/tradepoint/{tradepoint_id}', function(Application $app, Request $request, $tradepoint_id) {
             
-            $date_start = $request->get('date_start');    $date_end = $request->get('date_end');    $holiday_date_start = $request->get('holiday_date_start');    $holiday_date_end = $request->get('holiday_date_end');    $work_days = $request->get('work_days');    $contact_phone = $request->get('contact_phone');    $country = $request->get('country');    $kladr_code = $request->get('kladr_code');    $address = $request->get('address');    $specification = $request->get('specification');    
-            return new Response('How about implementing partnerTradepointPut as a PUT method ?');
-            });
-
-
-$app->DELETE('/OlgaArc/Olga_test_api/1.0.0/partner/tradepoint/{tradepoint_id}', function(Application $app, Request $request, $tradepoint_id) {
-            
-            
-            return new Response('How about implementing partnerTradepointTradepointIdDelete as a DELETE method ?');
-            });
-
-
-$app->PUT('/OlgaArc/Olga_test_api/1.0.0/partner/tradepoint/{tradepoint_id}', function(Application $app, Request $request, $tradepoint_id) {
-            
-            $date_start = $request->get('date_start');    $date_end = $request->get('date_end');    $holiday_date_start = $request->get('holiday_date_start');    $holiday_date_end = $request->get('holiday_date_end');    $work_days = $request->get('work_days');    $contact_phone = $request->get('contact_phone');    $country = $request->get('country');    $kladr_code = $request->get('kladr_code');    $address = $request->get('address');    $specification = $request->get('specification');    
-            return new Response('How about implementing partnerTradepointTradepointIdPut as a PUT method ?');
+            $date_start = $request->get('date_start');    $date_end = $request->get('date_end');    $holiday_date_start = $request->get('holiday_date_start');    $holiday_date_end = $request->get('holiday_date_end');    $work_days = $request->get('work_days');    $contact_phone = $request->get('contact_phone');    $country = $request->get('country');    $kladr_code = $request->get('kladr_code');    $address = $request->get('address');    $specification = $request->get('specification');    $delete = $request->get('delete');    
+            return new Response('How about implementing partnerTradepointTradepointIdPost as a POST method ?');
             });
 
 
